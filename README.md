@@ -10,7 +10,7 @@ MusicLibrary is a lightweight and structured system designed to organize and man
 ### Purpose
 This project aims to demonstrate core concepts of data organization, indexing, and file management.
 
-### Tech Stack (example)
+### Tech Stack
 - Python
 - File system management
 - JSON storage
