@@ -15,10 +15,38 @@ def list_musics(musics):
     for music in musics:
         print(music)
 
+def add_music(musics):
+    name = input("Write the name of the music: ")
+
+    if name == "":
+        print("Invalid name.")
+        return
+
+    if name in musics:
+        print("This music already exists!")
+        return
+    
+    if name.lower() == "exit":
+        return
+
+    musics.append(name)
+    write_musics(musics)
+
 #System
 
 list = read_musics()
-list_musics(list)
+while True:
+    print("Your list of musics: \n")
+    list_musics(list)
+    option = input("\nOptions: \n1. Add music\n2. Exit\n")
+
+    if option == "1":
+        add_music(list)
+
+    if option == "2":
+        print("Exiting...")
+        break
+
 
 
 
