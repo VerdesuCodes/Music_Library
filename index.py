@@ -32,18 +32,30 @@ def add_music(musics):
     musics.append(name)
     write_musics(musics)
 
+def remove_music(musics):
+    name = input("Write the name of the music to remove: ")
+
+    if name in musics:
+        musics.remove(name)
+        write_musics(musics)
+    else:
+        print("This music insn't in the list!")
+
 #System
 
 list = read_musics()
 while True:
     print("Your list of musics: \n")
     list_musics(list)
-    option = input("\nOptions: \n1. Add music\n2. Exit\n")
+    option = input("\nOptions: \n1. Add music\n2. Remove music\n3. Exit\n")
 
     if option == "1":
         add_music(list)
 
     if option == "2":
+        remove_music(list)
+
+    if option == "3":
         print("Exiting...")
         break
 
